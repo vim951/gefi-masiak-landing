@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gefi Masiak - Gestion de patrimoine pour expatriés français</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles for the page */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0; /* slate-200 */
+        }
+
+        /* Style for the particle animation canvas */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: #0a0a0a;
+        }
+
+        /* Glassmorphism effect for cards and sections */
+        .glass-effect {
+            background: rgba(15, 23, 42, 0.3); /* slate-900 with opacity */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Gradient text effect */
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        /* Subtle glow effect for buttons */
+        .btn-glow:hover {
+            box-shadow: 0 0 15px 0 rgba(56, 189, 248, 0.4);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Particle.js container -->
+    <div id="particles-js"></div>
+
+    <div class="relative z-10 min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="py-4 px-4 sm:px-6 lg:px-8">
+            <nav class="flex justify-between items-center max-w-7xl mx-auto">
+                <div class="text-2xl font-bold tracking-tighter">
+                    <a href="#" class="text-white">Gefi<span class="text-sky-400">.</span></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#fonctionnalites" class="text-slate-300 hover:text-white transition-colors duration-300">Fonctionnalités</a>
+                    <a href="#investisseurs" class="text-slate-300 hover:text-white transition-colors duration-300">Investisseurs</a>
+                </div>
+                <button class="bg-slate-700 text-slate-400 font-semibold py-2 px-4 rounded-lg cursor-not-allowed" disabled>
+                    Connexion
+                </button>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow">
+            <!-- Hero Section -->
+            <section class="text-center py-20 lg:py-32 px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white">
+                        La gestion de patrimoine, <span class="gradient-text">réinventée pour les expatriés</span> français.
+                    </h1>
+                    <p class="mt-6 text-lg md:text-xl text-slate-300 max-w-2xl mx-auto">
+                        Agrégez tous vos comptes, optimisez votre fiscalité internationale et gérez vos devises en toute simplicité. La clarté financière, où que vous soyez.
+                    </p>
+                    <div class="mt-10">
+                        <div class="p-2 rounded-lg glass-effect max-w-lg mx-auto">
+                            <h3 class="font-semibold text-white mb-3">Bientôt disponible !</h3>
+                            <p class="text-slate-400 mb-4 text-sm">Laissez votre email pour être le premier informé du lancement.</p>
+                            <form class="flex flex-col sm:flex-row gap-3">
+                                <input type="email" placeholder="votreadresse@email.com" class="w-full px-4 py-3 rounded-md bg-slate-800 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-sky-500 transition" required>
+                                <button type="submit" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-md transition-all duration-300 btn-glow">
+                                    Être notifié
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="fonctionnalites" class="py-20 lg:py-24 px-4">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-white">Une plateforme tout-en-un pour vos finances d'expatrié</h2>
+                        <p class="mt-4 text-lg text-slate-400">Conçue pour répondre aux défis uniques de la vie à l'étranger.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Feature 1 -->
+                        <div class="p-8 rounded-xl glass-effect">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-sky-500/20 mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Agrégation Bancaire Globale</h3>
+                            <p class="text-slate-300">Connectez vos comptes bancaires, livrets et investissements de différents pays en un seul tableau de bord sécurisé. Obtenez une vue d'ensemble de votre patrimoine en temps réel.</p>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="p-8 rounded-xl glass-effect">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-sky-500/20 mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><path d="m16 21-4-4-4 4"/><path d="M12 17V3"/><path d="m15 6-3-3-3 3"/><path d="M20 14h-4.5a2.5 2.5 0 0 0 0 5H20"/><path d="M4 14h4.5a2.5 2.5 0 0 1 0 5H4"/></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Optimisation Fiscale</h3>
+                            <p class="text-slate-300">Naviguez la complexité des conventions fiscales internationales. Nos outils vous aident à comprendre vos obligations et à identifier des opportunités d'optimisation pour votre situation d'expatrié.</p>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="p-8 rounded-xl glass-effect">
+                           <div class="flex items-center justify-center h-12 w-12 rounded-full bg-sky-500/20 mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><circle cx="12" cy="12" r="10"/><path d="M12 2v20"/><path d="M2 12h20"/></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Gestion Multi-Devises</h3>
+                            <p class="text-slate-300">Suivez vos actifs et vos dépenses dans plusieurs devises. Profitez de conversions au taux réel et d'analyses pour mieux gérer l'impact des fluctuations de change sur votre patrimoine.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Investor Section -->
+            <section id="investisseurs" class="py-20 lg:py-24">
+                <div class="max-w-4xl mx-auto px-4 text-center">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-white">Investir dans le futur de la <span class="gradient-text">FinTech pour expatriés</span></h2>
+                    <p class="mt-6 text-lg text-slate-300">
+                        Le marché des expatriés français représente une opportunité unique et mal desservie. Nous construisons la solution financière de référence pour cette population mobile et exigeante.
+                    </p>
+                    <div class="mt-10">
+                        <div class="inline-block p-6 rounded-lg glass-effect">
+                            <p class="text-white">Nous recherchons des partenaires visionnaires pour nous rejoindre. <br>Pour discuter d'une opportunité d'investissement, contactez-nous :</p>
+                            <a href="mailto:contact@gefi.masiak.fr" class="mt-4 inline-block font-bold text-sky-400 text-lg hover:text-sky-300 transition-colors duration-300">
+                                contact@gefi.masiak.fr
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center py-8 px-4 border-t border-slate-800">
+            <p class="text-slate-400">&copy; 2025 Gefi Masiak. Tous droits réservés.</p>
+        </footer>
+    </div>
+
+    <!-- particles.js library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        // Initialize particles.js
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80, // Number of particles
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#38bdf8" // Particle color (sky-400)
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#475569", // Line color (slate-600)
+                    "opacity": 0.2,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 0.5
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+
+</body>
+</html>
